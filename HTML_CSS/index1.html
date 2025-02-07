@@ -7,30 +7,48 @@
 </head>
 <body>
     <h3>Forms</h3>
-    <form action="action.html">
-        <label for="First name">First name:</label>
-        <input type="text" placeholder="Enter first name" required><br>
-        <label for="Last name">Last name:</label>
-        <input type="text" placeholder="Enter Last name" required><br>
-
-        <label for="Email">Email:</label>
-        <input type="email" placeholder="Enter your email" value="@sjit.ac.in" required><br>
-
-        <label for="cnfPassword">confirm Password:</label>
-        <input type="password" placeholder="Enter your Password" required><br>
-
-        <label for="dob">Date of Birth:</label>
-        <input type="date" placeholder="Enter your Date" required><br>
-
-        <label for="Phone number">Mobile number:</label>
-        <input type="tel" placeholder="Enter your Password" required><br>
-        <label for="Gender">Gender:</label>
-        <input type="radio"id name="Gender">Male
-        <input type="radio" id name="Gender">Female
-        <input type="radio" id name="Gender">others<br>
-        <button type="Submit">Sign Up</button>
+    <form action="./login.html">
+    <table>
+        <tr>
+            <td><label for="First name">First name:</label></td>
+            <td><input type="text" placeholder="Enter first name" required></td>
+        </tr>
+        <tr> 
+            <td><label for="Last name">Last name:</label></td>
+            <td><input type="text" placeholder="Enter Last name" required><br></td>
+        </tr>
+        <tr>
+            <td><label for="Email">Email:</label></td>
+            <td><input type="email" placeholder="Enter your email" value="@sjit.ac.in" required><br></td>
+        </tr>
+        <tr>
+            <td><label for="cnfPassword">confirm Password:</label></td>
+            <td><input type="password" placeholder="Enter your Password" required></td>            </td>
+        </tr>
+        <tr>
+            <td><label for="dob">Date of Birth:</label></td>
+            <td><input type="date" placeholder="Enter your Date" required></td>
+        </tr>
+        <tr>
+            <td><label for="Phone number">Mobile number:</label></td>
+            <td><input type="tel" placeholder="Enter your Password" required></td>
+        </tr> 
+        <tr>
+            <td><label for="Gender">Gender:</label></td>
+            <td>
+                <input type="radio"id name="Gender">Male
+            <input type="radio" id name="Gender">Female
+            <input type="radio" id name="Gender">others
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="Submit">Sign Up</button>
+            </td>
+        </tr>        
+    </table>
     </form>
-    <p>Already have a account?<a href=""> Login</a></p>
+    <p>Already have a account?<a href="login.html"> Login</a></p>
 
 </body>
 </html>
