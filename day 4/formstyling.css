@@ -1,12 +1,36 @@
-input[type=number]{
-    border:2px solid brown;
+input[type=text]{
+    padding: 5px;
+    margin: 5px;
+    border:3px solid brown;
+    border-radius: 30px;
+}
+input[type=date]{
+    padding: 5px;
+    margin: 5px;
+    border:3px solid cadetblue;
+    border-radius: 30px;
+}
+input[type=tel]{
+    padding: 5px;
+    margin: 5px;
+    border:3px solid darkgoldenrod;
     border-radius: 30px;
 }
 input{
-    border: 2px solid blueviolet;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid blueviolet;
     border-radius: 30px;
 }
 button{
-    top: 5px;
+    padding: 4px;
     margin: 5px;
+    border: 3px solid darkgreen;
+    border-radius: 20px;
+}
+input[type="radio"] {
+    accent-color: blue;
+    border: 3px solid darkgreen;
+    border-radius: 20px;
+
 }
