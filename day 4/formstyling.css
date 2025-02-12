@@ -1,0 +1,12 @@
+input[type=number]{
+    border:2px solid brown;
+    border-radius: 30px;
+}
+input{
+    border: 2px solid blueviolet;
+    border-radius: 30px;
+}
+button{
+    top: 5px;
+    margin: 5px;
+}
