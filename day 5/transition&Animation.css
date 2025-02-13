@@ -1,0 +1,17 @@
+.transition{
+    color:darkgreen;
+    background-color: goldenrod;
+    opacity: 1;
+    transition:background-color 5s,color 5s,padding 5s,width 20s ,height 20s,transform 5s,opacity 10s;
+    
+}
+.transition:hover{
+    background-color:goldenrod;
+    color: darkgreen;
+    padding: 30px;
+    height: 100px;
+    width: 300px;
+    opacity:0.1;
+    transform: rotate(180deg);
+
+}
