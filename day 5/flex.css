@@ -28,9 +28,8 @@ ul{
 ul:hover{
     display: list-item;
     color: darkgreen;
-    text-decoration: underline;
     background-color: whitesmoke;
-    border-radius: 5px;
+
 }
 header{
     background-color: darkgreen;
@@ -62,13 +61,17 @@ header{
     }
     ul{
         color: darkgreen;
+        position: absolute;
+        
+        background: whitesmoke;
+
     }
     ul:hover{
-        display: list-item;
+        position:absolute;
         color: darkgreen;
-        text-decoration: underline;
+        display:list-item;
         background-color: whitesmoke;
-        border-radius: 5px;
+    
     }
     header{
         background-color: darkgreen;
