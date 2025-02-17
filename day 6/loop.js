@@ -45,11 +45,11 @@ for({key,value} of Object.entries(Object1)){
 
 /*for(i in Object1){
     console.log(i); if put of like this error
-}*/
+}
 
 array.forEach((ele)=>{
     console.log(ele)
-})
-Object.values(Object1).forEach((key,ele)=>{
+})*/
+Object.values(Object1).forEach(([key,ele])=>{
     console.log(key,ele)
 })
