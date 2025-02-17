@@ -1,8 +1,16 @@
-function SJIT(message,abc){
-    console.log(message);
-    abc()
+// function SJIT(message,abc){
+//     console.log(message);
+//     abc()
+// }
+// function callbackSJIT(){
+//     console.log("Welcome back to SJIT");
+// }
+// SJIT("Welcome to SJIT",callbackSJIT)
+function formsub(message,cbf){
+    cbf()
+    console.log(message)
 }
-function callbackSJIT(){
-    console.log("Welcome back to SJIT");
+function formvalid(){
+    console.log("form validation success")
 }
-SJIT("Welcome to SJIT",callbackSJIT)
+formsub("form submitted sucessfully",formvalid)
