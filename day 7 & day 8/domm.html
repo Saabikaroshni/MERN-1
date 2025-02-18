@@ -7,11 +7,22 @@
     
 </head>
 <body>
-    <h1 id="domM">Hello,SJIT</h1>
-    <h2 id="domM1"></h2>
+    <h1 id="domM1">Hello,SJIT</h1>
+    <h2 id="domM2"></h2>
+    <p id="domM3"></p>
+    <p id="domM4"></p>
+    <p id="domM5"></p>
+    <p id="domM6"></p>
     <script >
-        document.getElementById("domM").textContent="Welcome to SJIT"
-        document.getElementById("domM1").innerHTML="Welcome again"
+        document.getElementById("domM1").textContent="Welcome to SJIT"
+        document.getElementById("domM2").innerHTML="Welcome again"
+        document.getElementById("domM3").innerText = "This is innerText manipulation";
+        document.getElementById("domM4").style.color = "red";
+        document.getElementById("domM4").innerText = "Styled using JavaScript";
+        document.getElementById("domM5").classList.add("bold-text");
+        document.getElementById("domM5").innerText = "Class added using classList";
+        document.getElementById("domM6").setAttribute("class", "highlight");
+        document.getElementById("domM6").innerText = "Class added using setAttribute";
     </script>
 </body>
 </html>
