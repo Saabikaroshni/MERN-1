@@ -4,20 +4,33 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from "./components/FunctionalComponent/Home"
 import About from "./components/FunctionalComponent/About"
-import Form from "./components/FunctionalComponent/Form"
+import Contact from "./components/FunctionalComponent/Contact"
 import Gallery from "./components/FunctionalComponent/Gallery"
-import Skills from "./components/FunctionalComponent/Skills"
+import Signup from "./components/FunctionalComponent/Signup"
+import ClassCompEg from './components/classcomponent/ClassComponentEG'
+import Navbar from "./components/FunctionalComponent/Navbar"
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
   return (
-      <div>
-         <h1>Welcome to React</h1>
-         <Home></Home>
-         <About></About>
-         <Form></Form>
-         <Gallery></Gallery>
-         <Skills></Skills>
-      </div>
+
+      <main>
+          <BrowserRouter>
+            <Navbar></Navbar>
+            <Routes>
+              <Route path='/' element={<Home properties="hello," sjit="SJIT"></Home>}></Route>
+              <Route path='./components/FunctionalComponent/About.jsx' element={<About></About>}></Route>
+              <Route path='/' element={<Contact></Contact>}></Route>
+              <Route path='/' element={<Gallery></Gallery>}></Route>
+              <Route path='/' element={<Signup></Signup>}></Route>
+            </Routes>
+
+          </BrowserRouter>
+        
+          
+      </main>
+      
+
   )
 }
 

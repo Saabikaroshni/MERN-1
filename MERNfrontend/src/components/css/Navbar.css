@@ -1,0 +1,13 @@
+nav{
+    display:flex;
+    list-style-type:none;
+    background-color: rgb(122, 27, 212);
+    color:rgb(245, 245, 245);
+    justify-content: space-around;
+    padding: 20px;
+    
+}
+*{
+    margin: 0;
+    padding:0;
+}
