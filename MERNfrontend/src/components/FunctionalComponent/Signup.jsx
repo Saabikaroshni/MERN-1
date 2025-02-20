@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 function Signup() {
   return (
     <div>
-      <form action="">
+      <form>
         <table>
           <tbody>
             <tr>

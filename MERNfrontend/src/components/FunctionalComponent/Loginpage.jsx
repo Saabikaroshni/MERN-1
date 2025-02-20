@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 function login(){
     return(
        <div>
-           <form action="">
+           <form>
                 <table>
                     <tbody>
                         <tr>
