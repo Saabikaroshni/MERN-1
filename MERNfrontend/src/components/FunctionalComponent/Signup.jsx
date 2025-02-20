@@ -44,10 +44,9 @@ function Signup() {
           </tbody>
         </table>
       </form>
-      <p>
-        Already have an account? 
+      <p style={{textAlign:"left"}}>
+        Already have an account? <Link to='/login'>Login</Link>
       </p>
-      <td><Link to='/login'>Login</Link></td>
     </div>
   );
 }
