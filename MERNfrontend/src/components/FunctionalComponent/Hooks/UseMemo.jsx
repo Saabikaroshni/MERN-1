@@ -11,7 +11,10 @@ const UseMemo = () => {
     backgroundColor: theme ? "black" : "White",
     color: theme ? "white" : "black",
   };
-  
+
+  var doublingUp=useMemo(()=>{
+    return slowFunction(number)
+  },[number])
   return (
     
       <div style={styling}>
@@ -24,7 +27,7 @@ const UseMemo = () => {
           onChange={(e) => setNumber(e.target.value)}
         />
         <h2>The number is {number}</h2>
-        <h2>The number is {slowFunction(number)}</h2>
+        <h2>The number is {doublingUp}</h2>
       </div>
 
   );

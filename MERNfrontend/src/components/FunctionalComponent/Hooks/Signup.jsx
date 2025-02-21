@@ -38,8 +38,8 @@ function Signup() {
               </td>
             </tr>
             <tr>
-            <td><Link to='/login'></Link></td>
-              <td><button type="submit">Sign Up</button></td>
+          
+              <td><button type="submit"><Link to='/login'>Sign Up</Link></button></td>
             </tr>
           </tbody>
         </table>

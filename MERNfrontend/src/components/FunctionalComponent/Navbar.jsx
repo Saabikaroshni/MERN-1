@@ -20,10 +20,12 @@ const Navbar = () =>{
                         <li><Link to='use-effect-api' className="link">useEffectAPI</Link></li>
                         <li><Link to='use-ref' className="link">useRef</Link></li>
                         <li><Link to='use-memo' className="link">useMemo</Link></li>
+                        <li><Link to='use-callback' className="link">useCallback</Link></li>
+                        <li><Link to='use-memoize' className="link">useMemoize</Link></li>
                     </ol>
                 )}
                 </div>
-                <li><Link to='/Contact' className="link">Contact</Link></li>
+                <li><Link to='/hoc' className="link">HOC</Link></li>
                 <li><Link to='/Signup' className="link">Signup</Link></li>
                 
                 

@@ -6,7 +6,7 @@ import Home from "./components/FunctionalComponent/Home";
 import About from "./components/FunctionalComponent/About";
 import Contact from "./components/FunctionalComponent/Contact";
 import Gallery from "./components/FunctionalComponent/Gallery";
-import Signup from "./components/FunctionalComponent/Signup";
+import Signup from "./components/FunctionalComponent/Hooks/Signup";
 import Login from "./components/FunctionalComponent/Loginpage"
 import ClassCompEg from "./components/classcomponent/ClassComponentEG";
 import Navbar from "./components/FunctionalComponent/Navbar";
@@ -16,6 +16,9 @@ import UseState from "./components/FunctionalComponent/Hooks/UseState"
 import UseEffectAPI from "./components/FunctionalComponent/Hooks/UseEffectAPI"
 import UseRef from "./components/FunctionalComponent/Hooks/UseRef"
 import UseMemo from "./components/FunctionalComponent/Hooks/UseMemo"
+import UseCallback from "./components/FunctionalComponent/Hooks/UseCallback"
+import UseMemoize from "./components/FunctionalComponent/Hooks/UseMemoize"
+import HoC from "./components/FunctionalComponent/HOC/HoC";
 function App() {
   return (
     <main>
@@ -33,6 +36,9 @@ function App() {
           <Route path="/use-effect-api" element={<UseEffectAPI></UseEffectAPI>}></Route>
           <Route path="/use-ref" element={<UseRef></UseRef>}></Route>
           <Route path="/use-memo" element={<UseMemo></UseMemo>}></Route>
+          <Route path="/use-callback" element={<UseCallback></UseCallback>}></Route>
+          <Route path="/use-memoize" element={<UseMemoize></UseMemoize>}></Route>
+          <Route path="/hoc" element={<HoC></HoC>}></Route>
           <Route path="/Gallery" element={<Gallery></Gallery>}></Route>
           <Route path="/Signup" element={<Signup></Signup>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
