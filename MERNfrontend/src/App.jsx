@@ -19,6 +19,10 @@ import UseMemo from "./components/FunctionalComponent/Hooks/UseMemo"
 import UseCallback from "./components/FunctionalComponent/Hooks/UseCallback"
 import UseMemoize from "./components/FunctionalComponent/Hooks/UseMemoize"
 import HoC from "./components/FunctionalComponent/HOC/HoC";
+import Memo from "./memoization/Memo";
+import LazyLoadingAndSuapense from "./memoization/LazyLoadingAndSuapense";
+import Text from "./memoization/Text";
+import Num from "./memoization/Num";
 function App() {
   return (
     <main>
@@ -39,9 +43,16 @@ function App() {
           <Route path="/use-callback" element={<UseCallback></UseCallback>}></Route>
           <Route path="/use-memoize" element={<UseMemoize></UseMemoize>}></Route>
           <Route path="/hoc" element={<HoC></HoC>}></Route>
+          <Route path="/memo" element={<Memo></Memo>}></Route>
+          <Route path="/lazy" element={<LazyLoadingAndSuapense></LazyLoadingAndSuapense>}></Route>
           <Route path="/Gallery" element={<Gallery></Gallery>}></Route>
           <Route path="/Signup" element={<Signup></Signup>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/Text" element={<Text></Text>}></Route>
+          <Route path="/number" element={<Num></Num>}></Route>
+          
+          
+         
          
         </Routes>
       </BrowserRouter>
