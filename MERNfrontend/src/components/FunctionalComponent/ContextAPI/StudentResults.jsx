@@ -2,7 +2,7 @@ import {useContext} from 'react'
 import {ResPub} from "../ContextAPI/CoE";
 const StudentResults = () => {
   const result = useContext(ResPub);
-  console.log(result);
+  
   return (
     <div>
       <h1>Result:</h1>
