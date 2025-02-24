@@ -38,6 +38,7 @@ const Navbar = () =>{
                     </ol>
                 )}
                 </div>
+                <li><Link to='/coe' className="link">PropDrilling</Link></li>
                 <li><Link to='/hoc' className="link">HOC</Link></li>
                 <li><Link to='/Signup' className="link">Signup</Link></li>
                 

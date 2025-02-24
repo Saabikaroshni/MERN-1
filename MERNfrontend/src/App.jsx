@@ -23,6 +23,8 @@ import Memo from "./memoization/Memo";
 import LazyLoadingAndSuapense from "./memoization/LazyLoadingAndSuapense";
 import Text from "./memoization/Text";
 import Num from "./memoization/Num";
+
+import CoE from "./components/FunctionalComponent/ContextAPI/CoE";
 function App() {
   return (
     <main>
@@ -49,6 +51,7 @@ function App() {
           <Route path="/Signup" element={<Signup></Signup>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/Text" element={<Text></Text>}></Route>
+          <Route path="/coe" element={<CoE></CoE>}></Route>
           <Route path="/number" element={<Num></Num>}></Route>
           
           
