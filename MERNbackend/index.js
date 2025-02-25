@@ -2,6 +2,7 @@ const express = require('express')
 const mdb = require('mongoose')
 const dotenv = require('dotenv')
 const Signup= require('./models/signupSchema')
+const bcrypt = require('bcrypt')
 const app = express()
 app.use(express.json())
 const PORT = 3001
@@ -23,14 +24,15 @@ mdb
 //     res.sendFile("D:\\MERN-1\\day 1\\index.html")
 // })
 
-app.post("/signup",(req,res)=>{
+app.post("/signup", async(req,res)=>{
     try{
        const{firstName,lastName,email,password,phoneNumber}=req.body;
+       const hashedpassword= await bcrypt.hash(password,10)
     const newSignup = new Signup({
         firstName:firstName,
         lastName:lastName,
         email:email,
-        password:password,
+        password:hashedpassword,
         phoneNumber:phoneNumber,
        
         
@@ -44,6 +46,30 @@ app.post("/signup",(req,res)=>{
     }
 
     
+});
+app.post("/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await Signup.findOne({ email: email });
+    if (!user) {
+      return res
+        .status(400)
+        .json({ message: "USER NOT FOUND", isLogin: false });
+    }
+    const ismatch = await bcrypt.compare(password, user.password);
+    if (ismatch) {
+      console.log("LOGIN SUCCESS");
+      return res
+        .status(200)
+        .json({ message: "Login successful", isLogin: true });
+    } else {
+      return res
+        .status(400)
+        .json({ message: "Invalid credentials", isLogin: false });
+    }
+  } catch (error) {
+    return res.status(500).json({ message: "CATCH ERROR", isLogin: false });
+  }
 });
 
 app.listen(PORT,()=>console.log("Server Started Successfully"))
