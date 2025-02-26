@@ -13,7 +13,7 @@ dotenv.config()
 mdb
   .connect(process.env.MONGODB_URL)
   .then(() => {
-    console.log("MDB Connection successfull");
+    console.log("MDB Connection is successfull");
   })
   .catch((err) => {
     console.log("Check your connection string", err);
@@ -80,29 +80,6 @@ app.post("/login", async(req, res) => {
 
 
 
-// app.post("/login", async (req, res) => {
-//   try {
-//     const { email, password } = req.body;
-//     const user = await Signup.findOne({ email: email });
-//     if (!user) {
-//       return res
-//         .status(400)
-//         .json({ message: "USER NOT FOUND", isLogin: false });
-//     }
-//     const ismatch = await bcrypt.compare(password, user.password);
-//     if (ismatch) {
-//       console.log("LOGIN SUCCESS");
-//       return res
-//         .status(200)
-//         .json({ message: "Login successful", isLogin: true });
-//     } else {
-//       return res
-//         .status(400)
-//         .json({ message: "Invalid credentials", isLogin: false });
-//     }
-//   } catch (error) {
-//     return res.status(500).json({ message: "CATCH ERROR", isLogin: false });
-//   }
-// });
+
 
 app.listen(PORT,()=>console.log("Server Started Successfully"))
