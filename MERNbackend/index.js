@@ -3,7 +3,9 @@ const mdb = require('mongoose')
 const dotenv = require('dotenv')
 const Signup= require('./models/signupSchema')
 const bcrypt = require('bcrypt')
+const cors = require('cors')
 const app = express()
+app.use(cors())
 app.use(express.json())
 const PORT = 3001
 dotenv.config()
@@ -34,42 +36,73 @@ app.post("/signup", async(req,res)=>{
         email:email,
         password:hashedpassword,
         phoneNumber:phoneNumber,
-       
-        
     });
     newSignup.save();
     console.log("signup success");
     res.status(201).json({message:"Signup Successful",isSignUp:true})
     }catch(error){
-        console.log("error");
+        console.log("signup error");
         res.status(201).json({message:"Signup unSuccessful",isSignUp:false})
     }
+  }
+);
 
-    
-});
-app.post("/login", async (req, res) => {
+// app.get('/getsignupdet',async(req,res)=>{
+//   const signup=Signup.findOne({email:email})
+//   console.log(signup)
+//   res.send("signup details fetched")
+// });
+app.post("/login", async(req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await Signup.findOne({ email: email });
-    if (!user) {
-      return res
-        .status(400)
-        .json({ message: "USER NOT FOUND", isLogin: false });
+    const{email,password}=req.body
+    const exitingUser=await Signup.findOne({email:email})
+    console.log(exitingUser)
+    if(exitingUser!=null){
+      const isValidPassword=await bcrypt.compare(password,exitingUser.password)
+      console.log(isValidPassword)
+      if(isValidPassword){
+        res.status(201).json({message:"login successfull",isLoggedin:true})
+      }
+      else{
+        res.status(201).json({message:"incorrect password",isLoggedin:false})
+      }
     }
-    const ismatch = await bcrypt.compare(password, user.password);
-    if (ismatch) {
-      console.log("LOGIN SUCCESS");
-      return res
-        .status(200)
-        .json({ message: "Login successful", isLogin: true });
-    } else {
-      return res
-        .status(400)
-        .json({ message: "Invalid credentials", isLogin: false });
+    else{
+      res.status(201).json({message:"user not found sigup first",isLoggedin:false})
     }
+    res.json({message:"login fetched"})
   } catch (error) {
-    return res.status(500).json({ message: "CATCH ERROR", isLogin: false });
+    console.log("login error");
+    res.status(400).json({message:"login error check your code",isLoggedin:false})
   }
 });
+
+
+
+
+// app.post("/login", async (req, res) => {
+//   try {
+//     const { email, password } = req.body;
+//     const user = await Signup.findOne({ email: email });
+//     if (!user) {
+//       return res
+//         .status(400)
+//         .json({ message: "USER NOT FOUND", isLogin: false });
+//     }
+//     const ismatch = await bcrypt.compare(password, user.password);
+//     if (ismatch) {
+//       console.log("LOGIN SUCCESS");
+//       return res
+//         .status(200)
+//         .json({ message: "Login successful", isLogin: true });
+//     } else {
+//       return res
+//         .status(400)
+//         .json({ message: "Invalid credentials", isLogin: false });
+//     }
+//   } catch (error) {
+//     return res.status(500).json({ message: "CATCH ERROR", isLogin: false });
+//   }
+// });
 
 app.listen(PORT,()=>console.log("Server Started Successfully"))

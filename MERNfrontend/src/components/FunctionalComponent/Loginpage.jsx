@@ -8,7 +8,7 @@ function login(){
                     <tbody>
                         <tr>
                             <td><label htmlFor="email">Email:</label></td>
-                            <td><input type="email" placeholder="Enter your email" defaultValue="@sjit.ac.in" required /></td>
+                            <td><input type="email" placeholder="Enter your email" required /></td>
                         </tr>
                         <tr>
                             <td><label htmlFor="cnfPassword">Confirm Password:</label></td>
