@@ -19,12 +19,13 @@ mdb
     console.log("Check your connection string", err);
   });
 
-// app.get("/",(req,res)=>{
-//     res.send("<h1>Welcome to  Backend</h1>")
-// })
-// app.get("/static",(req,res)=>{
-//     res.sendFile("D:\\MERN-1\\day 1\\index.html")
-// })
+
+app.get("/",(req,res)=>{
+    res.send("<h1>Welcome to  Backend</h1>")
+})
+app.get("/static",(req,res)=>{
+    res.sendFile("D:\\MERN-1\\day 1\\index.html")
+})
 
 app.post("/signup", async(req,res)=>{
     try{
@@ -46,12 +47,11 @@ app.post("/signup", async(req,res)=>{
     }
   }
 );
-
-// app.get('/getsignupdet',async(req,res)=>{
-//   const signup=Signup.findOne({email:email})
-//   console.log(signup)
-//   res.send("signup details fetched")
-// });
+app.get('/getsignupdet',async(req,res)=>{
+  const signup=Signup.findOne({email:email})
+  console.log(signup)
+  res.send("signup details fetched")
+});
 app.post("/login", async(req, res) => {
   try {
     const{email,password}=req.body
