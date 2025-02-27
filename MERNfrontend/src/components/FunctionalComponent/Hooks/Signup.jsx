@@ -11,7 +11,7 @@ function Signup() {
   const [phoneNumber,setnum]=useState(0);
   const handlesignup =async (event)=>{
     event.preventDefault()
-    const req=await axios.post("http://localhost:3001/signup",{
+    const req=await axios.post("https://mern-1-w5us.onrender.com",{
       firstName:firstName,lastName:lastName,email:email,password:password,phoneNumber:phoneNumber
     });
     const message=req.data.message
